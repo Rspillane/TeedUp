@@ -1,0 +1,128 @@
+button { 
+  background-color: none
+}
+
+.previewCard {
+  display: flex;
+  align-items: center;
+  height: 3z0px;
+  gap: 16px;
+  border-radius: 12px;
+}
+
+.title {
+  text-align: left;
+}
+
+.courseText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.locationRow {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 0.8rem
+}
+
+.courseDetailsContainer {
+  display: flex;
+  gap: 8px;
+}
+
+
+.courseDetails {
+  padding: 8px;
+  border-radius: 12px;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  height: fit-content;
+}
+
+p, h3 {
+  margin: 0;
+}
+
+.colourVariantBlue {
+  background-color: #cde9ea; /* lighter */
+}
+
+.colourVariantBlue .courseDetails {
+  background-color: #a8dadc; /* original */
+}
+
+.colourVariantTeal {
+  background-color: #b4e1db; /* lighter */
+}
+
+.colourVariantTeal .courseDetails {
+  background-color: #8ed2c9; /* original */
+}
+
+.colourVariantPurple {
+  background-color: #d8c4e8; /* lighter */
+}
+
+.colourVariantPurple .courseDetails {
+  background-color: #bfa2db; /* original */
+}
+
+.colourVariantOrange {
+  background-color: #f8cbb8; /* lighter */
+}
+
+.colourVariantOrange .courseDetails {
+  background-color: #f4b69d; /* original */
+}
+
+.colourVariantPink {
+  background-color: #f9c9d1; /* lighter */
+}
+
+.colourVariantPink .courseDetails {
+  background-color: #f6b5c0; /* original */
+}
+
+.colourVariantGreen {
+  background-color: #cde5c3; /* lighter */
+}
+
+.colourVariantGreen .courseDetails {
+  background-color: #b5d6a7; /* original */
+}
+
+.colourVariantYellow {
+  background-color: #fff8cb; /* lighter */
+}
+
+.colourVariantYellow .courseDetails {
+  background-color: #fef4b0; /* original */
+}
+
+.colourVariantIndigo {
+  background-color: #d8cff1; /* lighter */
+}
+
+.colourVariantIndigo .courseDetails {
+  background-color: #c1b3e8; /* original */
+}
+
+.colourVariantGray {
+  background-color: #e6e6e6; /* lighter */
+}
+
+.colourVariantGray .courseDetails {
+  background-color: #d6d6d6; /* original */
+}
+
+.colourVariantRed {
+  background-color: #f9c3c3; /* lighter */
+}
+
+.colourVariantRed .courseDetails {
+  background-color: #f7a8a8; /* original */
+}

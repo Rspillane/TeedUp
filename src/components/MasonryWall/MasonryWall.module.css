@@ -1,0 +1,71 @@
+.wall {
+  display: grid;
+  grid-template-columns: repeat(5, 125px);
+  grid-template-rows: repeat(2, 125px);
+  gap: 12px;
+  margin: 2rem auto;
+}
+
+.tile {
+  background-color: #ccc;
+  border-radius: 4px;
+  position: relative; /* needed for heading overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Tile size classes */
+.tile1x1 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.tile2x1 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.tile2x2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Heading inside tile */
+.heading {
+  position: absolute;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+
+/* ----------------- Heading positions ----------------- */
+
+/* Top row */
+.topLeft    { top: 12px; left: 12px; }
+.topCenter  { top: 12px; left: 50%; transform: translateX(-50%); }
+.topRight   { top: 12px; right: 12px; }
+
+/* Middle row */
+.middleLeft    { top: 50%; left: 12px; transform: translateY(-50%); }
+.middleCenter  { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.middleRight   { top: 50%; right: 12px; transform: translateY(-50%); }
+
+/* Bottom row */
+.bottomLeft   { bottom: 12px; left: 12px; }
+.bottomCenter { bottom: 12px; left: 50%; transform: translateX(-50%); }
+.bottomRight  { bottom: 12px; right: 12px; }
+
+
+/*  background colors (camelCase) */
+.bgBlue { background-color: #a8dadc; }
+.bgTeal { background-color: #8ed2c9; }
+.bgPurple { background-color: #bfa2db; }
+.bgOrange { background-color: #f4b69d; }
+.bgPink { background-color: #f6b5c0; }
+.bgGreen { background-color: #b5d6a7; }
+.bgYellow { background-color: #fef4b0; }
+.bgIndigo { background-color: #c1b3e8; }
+.bgGray { background-color: #d6d6d6; }
+.bgRed { background-color: #f7a8a8; }

@@ -1,0 +1,64 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  width: calc(100% - 4rem);
+  flex-wrap: wrap; /* allow wrapping for mobile menu */
+}
+
+a {
+  text-decoration: none;
+  color: inherit !important;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Desktop links */
+.navLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.bar, .barOpen {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+/* Mobile menu dropdown */
+.mobileMenu {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* ------------------- Responsive ------------------- */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* hide desktop links */
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger icon */
+  }
+
+  .mobileMenu {
+    display: flex; /* show dropdown when menuOpen is true */
+  }
+}

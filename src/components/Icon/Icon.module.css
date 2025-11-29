@@ -1,0 +1,21 @@
+.icon {
+  stroke-width: 1.8;
+}
+
+/* Using currentColor approach */
+.black {
+  color: #000;
+}
+
+.white {
+  color: #fff;
+}
+
+.muted {
+  color: #6b7280; /* grey-500 */
+}
+
+.disabled {
+  color: #c5c5c5; /* light grey */
+  opacity: 0.5;
+}

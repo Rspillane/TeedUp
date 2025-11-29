@@ -1,0 +1,61 @@
+/* Base button styles */
+.button {
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 999px; /* pill shape */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TYPES */
+.primary {
+  background-color: #000000ff;
+  color: #ffffff;
+}
+
+.primary:hover:not(.disabled) {
+  background-color: #333333ff; /* slightly lighter on hover */
+}
+
+.secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.secondary:hover:not(.disabled) {
+  background-color: #cfcfcf;
+}
+
+.tertiary {
+  background-color: transparent;
+  color: #000;
+}
+
+.tertiary:hover:not(.disabled) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* SIZES */
+.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.medium {
+  padding: 0.75rem 1.5rem; /* your searchButton padding */
+  font-size: 1rem;
+}
+
+.large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* DISABLED STATE */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
