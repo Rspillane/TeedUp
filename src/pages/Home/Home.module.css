@@ -19,6 +19,15 @@
   color: #1e1e1e;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  max-width: 90vw;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+    margin-top: 1.25rem;
+    
+  }
 }
 
 .subtitle {
@@ -27,6 +36,7 @@
   color: #555555;
   margin-top: 0;
   margin-bottom: 2rem;
+  max-width: 90vw
 }
 
 .searchInput {
@@ -54,10 +64,11 @@
   width: fit-content;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
   transition: scale 0.2s ease, box-shadow 0.2s ease;
+  max-width: 90vw;
 }
 
 .searchBar:hover {
-  scale: 1.02;
+  scale: 1.001;
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.15);
 }
 

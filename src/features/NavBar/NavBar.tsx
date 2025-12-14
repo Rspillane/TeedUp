@@ -10,16 +10,13 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      {/* Logo slot */}
-      <div className={styles.logo}>
+      {/* Logo slot (clickable - navigates to home) */}
+      <Link to="/" className={styles.logo} aria-label="Home">
         <h1>Tee'd Up</h1>
-      </div>
+      </Link>
 
       {/* Desktop / larger screens links */}
       <div className={styles.navLinks}>
-        <Button type="tertiary" size="small">
-          <Link to="/">Home</Link>
-        </Button>
         <Button type="tertiary" size="small">
           <Link to="/search">Search</Link>
         </Button>
@@ -42,10 +39,7 @@ export default function Navbar() {
       {menuOpen &&
         <div className={styles.mobileMenu}>
           <Button type="tertiary" size="small">
-            Home
-          </Button>
-          <Button type="tertiary" size="small">
-            Search
+            <Link to="/search">Search</Link>
           </Button>
           <Button type="tertiary" size="small">
             Map

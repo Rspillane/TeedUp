@@ -2,6 +2,7 @@ import styles from "./Button.module.css";
 import classNames from "classnames";
 
 export default function Button({
+  className,
   children,
   type = "primary",
   size = "medium",
@@ -10,7 +11,8 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const buttonClass = classNames(styles.button, styles[type], styles[size], {
-    [styles.disabled]: isDisabled
+    [styles.disabled]: isDisabled,
+    className
   });
 
   return (
@@ -31,4 +33,5 @@ interface ButtonProps {
   size?: "small" | "medium" | "large";
   isDisabled?: boolean;
   onClick?: () => void;
+  className?: string;
 }

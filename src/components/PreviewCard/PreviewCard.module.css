@@ -4,14 +4,25 @@ button {
 
 .previewCard {
   display: flex;
-  align-items: center;
-  height: 3z0px;
+  flex-direction: flex-end;
   gap: 16px;
   border-radius: 12px;
+  width: min(90%, 500px);
+  padding: 8px;
 }
+
+
 
 .title {
   text-align: left;
+  font-weight: 600;
+}
+
+.courseInfo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
 }
 
 .courseText {
@@ -19,6 +30,13 @@ button {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+.coursePhoto {
+  min-width: 100px;
+  height: auto;
+  background-color: #d3d3d3;
+  border-radius: 8px;
 }
 
 .locationRow {
@@ -125,4 +143,15 @@ p, h3 {
 
 .colourVariantRed .courseDetails {
   background-color: #f7a8a8; /* original */
+}
+
+@media (max-width: 420px) {
+  .previewCard {
+    flex-direction: column;
+  }
+
+  .coursePhoto {
+    width: 100%;
+    height: 200px;
+  }
 }

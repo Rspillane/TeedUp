@@ -1,4 +1,5 @@
 import Button from "../../components/Button/Button";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import styles from "./Home.module.css";
 import globalStyles from "../../styles/global.module.css";
 import MasonryWall from "../../components/MasonryWall/MasonryWall";
@@ -13,16 +14,7 @@ export default function Home() {
           <h2 className={styles.subtitle}>
             Search by location, course name or postcode
           </h2>
-          <div className={styles.searchBar}>
-            <input
-              type="text"
-              placeholder="Search..."
-              className={styles.searchInput}
-            />
-            <Button type="primary" size="medium">
-              Search
-            </Button>
-          </div>
+          <SearchBar />
           <div style={{ paddingTop: 24 }} />
           <MasonryWall />
         </div>

@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 2rem;
   padding: 1rem 2rem;
   width: calc(100% - 4rem);
   flex-wrap: wrap; /* allow wrapping for mobile menu */
@@ -27,16 +27,39 @@ a {
 /* Hamburger icon */
 .hamburger {
   display: none; /* hidden on desktop */
+  right: 0;
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
 }
 
-.bar, .barOpen {
+.hamburger span {
+  display: block;
   width: 25px;
   height: 3px;
   background-color: #000;
-  transition: all 0.3s ease;
+  border-radius: 2px;
+  transition: transform 0.28s ease, opacity 0.28s ease, background-color 0.28s ease;
+  transform-origin: center;
+}
+
+/* closed state (default) */
+.bar {
+  /* no-op; visual defaults come from .hamburger span */
+}
+
+/* open state: transform the three lines into an X */
+.barOpen:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barOpen:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.barOpen:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Mobile menu dropdown */
@@ -46,6 +69,19 @@ a {
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 1rem;
+  /* animate when it appears */
+  animation: slideDownFade 260ms ease;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ------------------- Responsive ------------------- */
@@ -56,6 +92,7 @@ a {
 
   .hamburger {
     display: flex; /* show hamburger icon */
+    margin-left: auto; /* push the hamburger to the right on mobile */
   }
 
   .mobileMenu {

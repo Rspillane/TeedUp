@@ -14,26 +14,49 @@ const CourseDetails = ({ value, category }: CourseDetailsProps) => {
   );
 };
 
-export default function PreviewCard({ colourVariant }: PreviewCardProps) {
+export default function PreviewCard({
+  colourVariant,
+  par = 72,
+  yards = 6500,
+  rating = 72.5,
+  slope = 120,
+  onClick,
+  image,
+  courseName = "Stoneleigh Deer Park Golf Club",
+  location = "Stoneleigh",
+  distance = 10
+}: PreviewCardProps) {
   return (
     <button
       className={classNames(
         styles.previewCard,
         styles[`colourVariant${colourVariant}`]
       )}
+      onClick={onClick}
     >
-      <div className={styles.courseText}>
-        <h3 className={styles.title}>Stoneleigh Deer Park Golf Club</h3>
-        <div className={styles.locationRow}>
-          <p className={styles.location}>Stoneleigh</p>
-          <p className={styles.location}>(Distance)</p>
-        </div>
+      <div className={styles.coursePhoto}>
+        <img src={image} />
       </div>
-      <div className={styles.courseDetailsContainer}>
-        <CourseDetails value={72} category="Par" />
-        <CourseDetails value={6500} category="Yards" />
-        <CourseDetails value={72.5} category="Rating" />
-        <CourseDetails value={120} category="Slope" />
+      <div className={styles.courseInfo}>
+        <div className={styles.courseText}>
+          <h3 className={styles.title}>
+            {courseName}
+          </h3>
+          <div className={styles.locationRow}>
+            <p className={styles.location}>
+              {location}
+            </p>
+            <p className={styles.location}>
+              ({distance} miles)
+            </p>
+          </div>
+        </div>
+        <div className={styles.courseDetailsContainer}>
+          <CourseDetails value={par} category="Par" />
+          <CourseDetails value={yards} category="Yards" />
+          <CourseDetails value={rating} category="Rating" />
+          <CourseDetails value={slope} category="Slope" />
+        </div>
       </div>
     </button>
   );
@@ -56,4 +79,13 @@ interface PreviewCardProps {
     | "Pink"
     | "Purple"
     | "Orange";
+  /* course detail props */
+  par?: number;
+  yards?: number;
+  rating?: number;
+  slope?: number;
+  image?: string;
+  courseName?: string;
+  location?: string;
+  distance?: number;
 }
