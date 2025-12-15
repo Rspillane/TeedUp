@@ -16,15 +16,15 @@ const CourseDetails = ({ value, category }: CourseDetailsProps) => {
 
 export default function PreviewCard({
   colourVariant,
-  par = 72,
-  yards = 6500,
-  rating = 72.5,
-  slope = 120,
+  par,
+  yards,
+  rating,
+  slope,
   onClick,
   image,
-  courseName = "Stoneleigh Deer Park Golf Club",
-  location = "Stoneleigh",
-  distance = 10
+  courseName,
+  location,
+  distance
 }: PreviewCardProps) {
   return (
     <button
@@ -52,10 +52,10 @@ export default function PreviewCard({
           </div>
         </div>
         <div className={styles.courseDetailsContainer}>
-          <CourseDetails value={par} category="Par" />
-          <CourseDetails value={yards} category="Yards" />
-          <CourseDetails value={rating} category="Rating" />
-          <CourseDetails value={slope} category="Slope" />
+          <CourseDetails value={par ?? 0} category="Par" />
+          <CourseDetails value={yards ?? 0} category="Yards" />
+          <CourseDetails value={rating ?? 0} category="Rating" />
+          <CourseDetails value={slope ?? 0} category="Slope" />
         </div>
       </div>
     </button>

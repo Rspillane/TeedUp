@@ -91,13 +91,11 @@ export default function Search() {
     <section className={globalStyles.section}>
       <div style={{ paddingTop: 24 }} />
       <SearchBar
-  placeholder="Search course name or postcode"
-  onSearch={setSearchQuery}
-/>
+        placeholder="Search course name or postcode"
+        onSearch={setSearchQuery}
+        buttonLabel="Filter"
+      />
 
-      <Button type="primary" size="medium">
-        <Icon icon={FilterIcon} color="white" size={22} />
-      </Button>
       <div style={{ paddingTop: 24 }} />
 
       {loading && <p>Loading courses…</p>}
